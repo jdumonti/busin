@@ -50,7 +50,6 @@ public class TransitXMLFactoryTests {
         String stop  = "50889";
         Document xmlDocument = TransitXMLFactory.retrieveXMlDocumentForStopSchedule(stop);
         Node node = xmlDocument.getFirstChild();
-        System.out.println(node.getTextContent());
         assertThat(node.getTextContent(), containsString("Northbound Shorehill at John Bruce"));
     }
     
